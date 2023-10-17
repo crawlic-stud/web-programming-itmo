@@ -72,12 +72,6 @@ if ($user_exists) {
     $inverse_password = invert_password($password);
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-    // echo $binary . " - " . $password;
-    // echo "<br>";
-    // echo $inverted_binary . " - " . $inverted_password;
-    // echo "<br>";
-    // echo "hash - " . $hashed_password;
-
     $query = "INSERT INTO users (
         login, plain_password, inverse_password, hashed_password
     ) VALUES (
