@@ -44,6 +44,10 @@ $query = "INSERT INTO orders (
 $result = $db->exec($query);
 
 $results = $db->query("SELECT * FROM orders");
+while ($row = $results->fetchArray()) 
+{
+    var_dump($row);
+}
 
 $db->close();
 ?>
