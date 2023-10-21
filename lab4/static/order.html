@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <form action="../scripts/save_data.php" method="post">
+
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name">
+        <label for="patronymic">Отчество:</label>
+        <input type="text" id="patronymic" name="patronymic">
+        
+        <label for="items">Товары:</label>
+        <select id="items" name="items">
+            <option value="item1">Помидор</option>
+            <option value="item2">Огурец</option>
+            <option value="item3">Перец</option>
+            <option value="item4">Брокколи</option>
+            <option value="item5">Картофель</option>
+            <option value="item6">Морковь</option>
+            <option value="item7">Лук</option>
+        </select>
+
+        <label for="delivery_address">Адрес для доставки:</label>
+        <input type="text" id="delivery_address" name="delivery_address">
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" name="phone">
+        <label for="email">Адрес электронной почты:</label>
+        <input type="text" id="email" name="email">
+        <label for="comment">Комментарий к заказу:</label>
+        <textarea id="comment" name="comment"></textarea>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
