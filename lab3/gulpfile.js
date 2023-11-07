@@ -1,6 +1,5 @@
 const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
-const watch = require("gulp-watch");
 
 function task1(cb) {
   setTimeout(cb, 2000);
