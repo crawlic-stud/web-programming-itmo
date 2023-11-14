@@ -1,7 +1,6 @@
 import socket
-import time
 
-from server import ADDR, FORMAT, DISCONNECT_MESSAGE, MAX_SIZE
+from server import ADDR, FORMAT, MAX_SIZE
 
 
 def send(client: socket.socket, msg: str):

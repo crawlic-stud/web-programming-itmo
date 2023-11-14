@@ -3,7 +3,6 @@ import socket
 
 ADDR = ("localhost", 5050)
 FORMAT = "utf-8"
-DISCONNECT_MESSAGE = "DISCONNECT"
 MAX_SIZE = 1024
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
