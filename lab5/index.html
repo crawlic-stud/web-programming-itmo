@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <style>
+        area {
+            outline: 2px solid red;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+  <h1>Карта изображений</h1>
+  
+  <img src="image.png" alt="Изображение" usemap="#image-map">
+  
+  <map name="image-map">
+    <area shape="circle" coords="200,150,100" href="page1.html" alt="Область">
+    <area shape="circle" coords="100,400,100" href="page2.html" alt="Область">
+    <area shape="circle" coords="400,200,100" href="page3.html" alt="Область">
+    <area shape="circle" coords="650,100,100" href="page4.html" alt="Область">
+    <area shape="circle" coords="650,450,100" href="#" alt="Область" onclick="alert('тут пусто :)')">
+  </map>
+
+  <script>
+    function highlight(area) {
+    }
+  </script>
+</body>
+</html>
