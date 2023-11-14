@@ -1,4 +1,5 @@
 import socket
+import time
 
 from server import ADDR, FORMAT, DISCONNECT_MESSAGE, MAX_SIZE
 
@@ -11,16 +12,15 @@ def send(client: socket.socket, msg: str):
 def start():
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client.connect(ADDR)
+    send(client, "hello, server!")
     while True:
-        msg = input("Input (q - quit): ")
-        if msg == "q":
-            break
-        send(client, msg)
         response = client.recv(MAX_SIZE).decode(FORMAT)
         print(f"Response from server: {response}")
+        q = input("Press q to quit: ")
+        if q == "q":
+            break
 
-    send(client, DISCONNECT_MESSAGE)
-    print("Disconnected.")
+    client.close()
 
 
 if __name__ == "__main__":

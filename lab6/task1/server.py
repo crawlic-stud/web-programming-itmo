@@ -15,14 +15,8 @@ def handle_client(conn: socket.socket, addr: tuple[str, int]):
     connected = True
     while connected:
         msg = conn.recv(MAX_SIZE).decode(FORMAT)
-        conn.send(msg.encode(FORMAT))
-        if not msg:
-            break
-
-        if msg == DISCONNECT_MESSAGE:
-            connected = False
-
         print(f"[{addr}] {msg}")
+        conn.send("hello, client!".encode(FORMAT))
 
     conn.close()
 
