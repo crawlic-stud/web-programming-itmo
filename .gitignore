@@ -2,3 +2,5 @@ node_modules
 .vscode
 wordpress
 __pycache__
+venv
+.idea
