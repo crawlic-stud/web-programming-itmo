@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.forms.models import model_to_dict
 
 from .forms import ContactForm
-from .utils import send_message
 from .models import Article
 
 
@@ -20,11 +19,6 @@ def contacts(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            # send_message(
-            #     form.cleaned_data["name"],
-            #     form.cleaned_data["email"],
-            #     form.cleaned_data["message"],
-            # )
             context = {"success": 1}
     else:
         form = ContactForm()
